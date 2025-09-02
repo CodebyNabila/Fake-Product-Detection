@@ -8,7 +8,7 @@ Fake products are a huge problem today — from medicines to cosmetics, agricult
 
 2. Generates a unique QR code for each product.
 
-3. Fake Product Detection – verifies authenticity of products.
+3. Detects Fake Products – verifies authenticity of products.
 
 4. Customers can scan the QR code to check whether a product is genuine or fake.
 
