@@ -25,7 +25,9 @@ Blockchain Simulation (Custom Python class) – for secure product records
 qrcode + PIL – to generate product QR codes
   
 
-# Features in Action
+# Features
+
+Index Page → Access User Registration and Admin Login
 
 Register Page → New users sign up.
 
@@ -37,7 +39,7 @@ Verification Page → Scan QR → See details → Confirm if genuine or fake.
 
 # Screenshots
 
-# Admin Page
+# Index Page
 ![Admin_Page](Screenshots/Admin.png)
 
 # Register Page  
