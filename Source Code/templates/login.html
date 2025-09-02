@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('/static/6.jpeg'); /* Image must be inside static/ */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            background: rgba(218, 194, 194, 0.57); /* Transparent box */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(229, 175, 175, 0.451);
+            text-align: center;
+            width: 320px;
+        }
+
+        .login-box h1 {
+            color: #614453;
+            margin-bottom: 18px;
+        }
+
+        .login-box input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 7px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            width: 30%;
+            padding: 9px;
+            background: #ed66bb;
+            border: #f8029e;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+            margin-top: 15px;
+        }
+
+        .login-box button:hover {
+            background: #f094d7;
+        }
+
+        .forget {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .forget a {
+            color: #76536a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .forget a:hover {
+            color: #5a3e50;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Login Page</h1>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            
+            <p class="forget">
+                Forgot Password? <a href="/forgot-password">Click Here</a>
+            </p>
+            <p class="forget">
+                Don't have an account? <a href="/register">Sign up</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

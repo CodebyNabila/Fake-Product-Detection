@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Product Detection using Blockchain Technology</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url("{{ url_for('static', filename='7.jpeg') }}") no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Dark overlay on background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(81, 68, 68, 0.396);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(213, 206, 206, 0.915);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      max-width: 480px;
+      width: 100%;
+      animation: fadeIn 1.2s ease-in-out;
+      border: 1px solid rgba(226, 138, 138, 0.511);
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #392c2c;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 8px rgba(107, 94, 94, 0.7);
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 10px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.3);
+      transform: skewX(-30deg);
+      transition: 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating particles animation */
+    .particles {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .particles span {
+      position: absolute;
+      display: block;
+      width: 10px; height: 10px;
+      background: rgba(238, 101, 197, 0.807);
+      border-radius: 50%;
+      bottom: -150px;
+      animation: rise 20s infinite;
+    }
+    .particles span:nth-child(1) { left: 10%; animation-duration: 12s; }
+    .particles span:nth-child(2) { left: 25%; animation-duration: 18s; }
+    .particles span:nth-child(3) { left: 40%; animation-duration: 15s; }
+    .particles span:nth-child(4) { left: 60%; animation-duration: 20s; }
+    .particles span:nth-child(5) { left: 75%; animation-duration: 17s; }
+    .particles span:nth-child(6) { left: 90%; animation-duration: 22s; }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-1000px) scale(1.2); opacity: 0; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="particles">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="container">
+    <h1>Fake Product Detection using Blockchain Technology</h1>
+
+    <a href="{{ url_for('admin') }}" target="_blank" class="btn"> Admin</a>
+    <a href="{{ url_for('register') }}" target="_blank" class="btn"> Register</a>
+  </div>
+</body>
+</html>

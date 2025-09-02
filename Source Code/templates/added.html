@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Added to Blockchain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* === Body & Background === */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('/static/7.jpeg')
+      animation: bgAnimation 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgAnimation {
+      0% {background-position: 0% 50%;}
+      100% {background-position: 100% 50%;}
+    }
+
+    /* === Card === */
+    .card {
+      background: rgb(241, 141, 206);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* === Success Message === */
+    h3 {
+      color: #eef3f1;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    /* === Button === */
+    .btn {
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 50px;
+      background: #84c6fc;
+      color: rgb(35, 33, 33);
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #029e57;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Product is successfully added to the Blockchain</h3>
+    <a href="/dashboard" class="btn">Go to Dashboard</a>
+  </div>
+
+</body>
+</html>
